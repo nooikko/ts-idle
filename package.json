@@ -1,0 +1,54 @@
+{
+  "name": "ts-idle",
+  "version": "0.1.0",
+  "description": "A set of tools to build idle games",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nooikko/ts-idle.git"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo DODO",
+    "build": "tsc",
+    "lint:check": "eslint . --ext .ts,.tsx",
+    "lint": "npm run lint:check -- --fix"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged -v"
+    }
+  },
+  "author": "Quinn Penney <quinn.penney@outlook.com>",
+  "license": "MIT",
+  "files": [
+    "src/",
+    "!src/test/",
+    "dist/",
+    "!dist/test/",
+    "!dist/tsconfig.tsbuildinfo"
+  ],
+  "keywords": [],
+  "homepage": "https://github.com/nooikko/ts-idle",
+  "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@types/node": "^18.11.9",
+    "@types/uuid": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": "^5.42.1",
+    "babel-loader": "^8.3.0",
+    "eslint": "^8.27.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.4",
+    "uuid": "^9.0.0"
+  }
+}
