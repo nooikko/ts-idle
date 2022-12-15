@@ -12,7 +12,8 @@
     "test": "echo DODO",
     "build": "tsc",
     "lint:check": "eslint . --ext .ts,.tsx",
-    "lint": "npm run lint:check -- --fix"
+    "lint": "npm run lint:check -- --fix",
+    "format:check": "npm run lint:check"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
